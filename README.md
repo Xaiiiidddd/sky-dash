@@ -2,7 +2,7 @@
 
 An endless flyer built with **Flutter** and **Dart**. Tap to flap, dodge the glowing pipes, grab spinning coins, and watch your bird evolve while the sky moves from day to night. The whole game is drawn in code with emojis and gradients, with no image assets.
 
-Built from the GDG Flappy Flame workshop starter, then redesigned with custom visuals, a day/night cycle, coins, particles and a polished UI.
+Built from the GDG's Darted Pixels workshop starter, then redesigned with custom visuals, a day/night cycle, coins, particles and a polished UI.
 
 ![Sky Dash gameplay](docs/screenshot.png)
 
