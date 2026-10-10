@@ -1,93 +1,71 @@
-# flappy_flame
+# 🦉 Sky Dash
 
-an experimental flappy ***birb*** game on flame package
+An endless flyer built with **Flutter** and **Dart**. Tap to flap, dodge the glowing pipes, grab spinning coins, and watch your bird evolve while the sky moves from day to night. The whole game is drawn in code with emojis and gradients, with no image assets.
 
-nothing to read here, just build it and play when bored
+Built from the GDG Flappy Flame workshop starter, then redesigned with custom visuals, a day/night cycle, coins, particles and a polished UI.
 
----
+![Sky Dash gameplay](docs/screenshot.png)
 
-## 🚀 Overview
-Flappy Flame is a simple, addictive side-scrolling game where you control a ***birb*** and try to dodge pipes for as long as your reflexes allow. This project is a playground for the [Flame](https://flame-engine.org/) game engine in Flutter, and for anyone who just wants to procrastinate productively.
+## ✨ Features
 
----
+- **Evolving bird:** your bird changes as you score: 🐤 → 🐦 → 🦉 → 🦅 → 🐲 (every 10 points).
+- **Day/night cycle:** the sky fades through ☀️ day → 🌅 sunset → 🌙 night → 🌄 dawn, with twinkling stars and drifting clouds.
+- **Coins:** spinning 🪙 sit in every gap and give bonus points.
+- **Rising difficulty:** pipes speed up and the gaps shrink as your score grows.
+- **Game feel:** particle bursts, screen shake on a crash, and a glowing neon pipe style.
+- **Glass UI:** frosted score panels, a game-over card with medals (🥉 🥈 🥇 🏆), and a "NEW BEST" highlight.
+- **Sound and haptics:** uses Flutter's built-in `SystemSound` and `HapticFeedback`, so it needs no extra packages.
+- **Controls:** tap, click, or press **Space**.
 
-## 🎮 Features
-- Classic flappy ***birb*** gameplay
-- Smooth animations and physics
-- Score tracking and persistent high score
-- Responsive controls for mobile and desktop
-- Modular code structure for easy extension
-- Cross-platform: Android, iOS, Web, Windows, macOS, Linux
+## 🚀 Run it
 
----
+You need the [Flutter SDK](https://docs.flutter.dev/get-started/install) installed.
 
-## 🛠️ Getting Started
+```bash
+git clone https://github.com/Xaiiiidddd/sky-dash.git
+cd sky-dash
+flutter pub get
+flutter run -d chrome
+```
 
-### Prerequisites
-- [Flutter SDK](https://flutter.dev/docs/get-started/install)
-- [Dart](https://dart.dev/get-dart)
-- Compatible IDE (VS Code, Android Studio, etc.)
+You can also use `-d windows` or any connected device.
 
-### Installation
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/NiikhilRaj/flappy_flame.git
-   cd flappy_flame
-   ```
-2. **Install dependencies:**
-   ```sh
-   flutter pub get
-   ```
-3. **Run the app:**
-   - **Android/iOS:**
-     ```sh
-     flutter run
-     ```
-   - **Web:**
-     ```sh
-     flutter run -d chrome
-     ```
-   - **Windows/macOS/Linux:**
-     ```sh
-     flutter run -d windows  # or macos/linux
-     ```
+## 🗂️ Project structure
 
----
-
-## 📂 Project Structure
 ```
 lib/
-  main.dart            # Entry point
-  game/                # Game logic and components
-  models/              # Data models
-  screens/             # UI screens
-  services/            # Score and other services
-  widgets/             # Custom widgets
-android/ios/web/linux/macos/windows/  # Platform-specific files
+├── main.dart                  # The Sky Dash game (screen, physics, visuals, sound)
+└── workshop/
+    ├── student_code.dart      # The 9 workshop tasks: colors, gravity, gap, speed, name
+    └── game_settings.dart     # Central settings for the original Flame game
 ```
 
----
+## 🎛️ Customize it
 
-## 🖼️ Screenshots
+Open `lib/workshop/student_code.dart` and change the values:
 
-| Home Screen | Gameplay | Scoreboard |
-|-------------|----------|-----------|
-| ![Home](screenshots/home.png) | ![Game](screenshots/game.png) | ![Scoreboard](screenshots/scoreboard.png) |
+| Task | Function | What it controls |
+|------|----------|------------------|
+| 1 | `getBirdColor()` | Bird color |
+| 2 | `getGravity()` | How fast the bird falls |
+| 3 | `getGapSize()` | Gap between pipes |
+| 4 | `getPipeSpeed()` | How fast the pipes move |
+| 5 | `calculateJumpStrength()` | Flap power (scales with gravity) |
+| 6 | `getPipeColor()` | Pipe color |
+| 7 | `getSkyTopColor()` / `getSkyBottomColor()` | Daytime sky colors |
+| 8 | `calculatePoints()` | Points per pipe |
+| 9 | `getCreatorName()` | Name shown on the title screen |
 
----
+Save, then hot reload with `r` (use `R` for a full restart after changing constants).
 
-## ✨ Credits
-- [Flame Engine](https://flame-engine.org/)
-- [Flutter](https://flutter.dev/)
-- Inspired by the original Flappy Bird
+## 🛠️ Built with
 
----
+- Flutter / Dart
+- `CustomPaint`-free rendering: widgets, emojis and gradients only
+- A `Ticker`-driven game loop
 
+## 👤 Author
 
-## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+**Zaid**: [github.com/Xaiiiidddd](https://github.com/Xaiiiidddd)
 
----
-
-## 📬 Contact
-For questions or feedback, open an issue or reach out via [GitHub](https://github.com/NiikhilRaj).
+Made during the GDG workshop. Fly high! 🚀
